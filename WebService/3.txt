@@ -1,0 +1,130 @@
+Theory: A web service is any piece of software that makes itself available over the
+internet and uses a standardized XML messaging system. XML is used to encode all
+communications to a web service. For example, a client invokes a web service by
+sending an XML message, then waits for a corresponding XML response. As all
+communication is in XML, web services are not tied to any one operating system or
+programming language—Java can talk with Perl; Windows applications can talk with
+Unix applications.
+
+Web services are XML-based information exchange systems that use the Internet for
+direct application-to-application interaction. These systems can include programs,
+objects, messages, or documents.
+The architecture of web service interacts among three roles: service provider, service
+requester, and service registry. The interaction involves the three operations: publish,
+find, and bind. These operations and roles act upon the web services artifacts. The
+web service artifacts are the web service software module and its description.
+Web Service Architecture
+
+There are three roles in web service architecture:
+i. Service Provider: From an architectural perspective, it is the platform that hosts
+the services.
+ii. Service Requestor: Service requestor is the application that is looking for and
+invoking or initiating an interaction with a service. The browser plays the
+requester role, driven by a consumer or a program without a user interface.
+iii. Service Registry: Service requestors find service and obtain binding information
+for services during development.
+
+
+Different process in web service Architecture:
+o Publication of service descriptions (Publish)
+o Finding of services descriptions (Find)
+o Invoking of service based on service descriptions (Bind)
+Publish: In the publish operation, a service description must be published so that a
+service requester can find the service.
+Find: In the find operation, the service requestor retrieves the service description
+directly. It can be involved in two different lifecycle phases for the service requestor:
+o At design, time to retrieve the service's interface description for program
+development.
+o And, at the runtime to retrieve the service's binding and location description
+for invocation.
+Bind: In the bind operation, the service requestor invokes or initiates an interaction
+with the service at runtime using the binding details in the service description to
+locate, contact, and invoke the service.
+
+
+Artifacts of the web service
+There are two artifacts of web services:
+o Service
+o Service Registry
+Service: A service is an interface described by a service description. The service
+description is the implementation of the service. A service is a software module
+deployed on network-accessible platforms provided by the service provider. It
+interacts with a service requestor. Sometimes it also functions as a requestor, using
+other Web Services in its implementation.
+Service Description: The service description comprises the details of
+the interface and implementation of the service. It includes its data types, operations,
+binding information, and network location. It can also categorize other metadata to
+enable discovery and utilize by service requestors. It can be published to a service
+requestor or a service registry.
+
+
+Web Service Implementation:
+Requirements Phase: The objective of the requirements phase is to understand the
+business requirement and translate them into the web services requirement. The
+requirement analyst should do requirement elicitation (it is the practice of researching
+and discovering the requirements of the system from the user, customer, and other
+stakeholders). The analyst should interpret, consolidate, and communicate these
+requirements to the development team. The requirements should be grouped in a
+centralized repository where they can be viewed, prioritized, and mined for interactive
+features.
+Analysis Phase: The purpose of the analysis phase is to refine and translate the web
+service into conceptual models by which the technical development team can
+understand. It also defines the high-level structure and identifies the web service
+interface contracts.
+Design Phase: In this phase, the detailed design of web services is done. The
+designers define web service interface contract that has been identified in the analysis
+phase. The defined web service interface contract identifies the elements and the
+corresponding data types as well as mode of interaction between web services and
+client.
+Coding Phase: Coding and debugging phase is quite similar to other software
+component-based coding and debugging phase. The main difference lies in the
+creation of additional web service interface wrappers, generation of WSDL, and client
+stubs.
+Test Phase: In this phase, the tester performs interoperability testing between the
+platform and the client's program. Testing to be conducted is to ensure that web
+services can bear the maximum load and stress. Other tasks like profiling of the web
+service application and inspection of the SOAP message should also perform in the
+test phase.
+Deployment Phase: The purpose of the deployment phase is to ensure that the web
+service is properly deployed in the distributed system. It executes after the testing
+phase. The primary task of deployer is to ensure that the web service has been
+properly configured and managed. Other optional tasks like specifying and registering
+the web service with a UDDI registry also done in this phase.
+Web Service Protocol Stack:
+A second option for viewing the web service architecture is to examine the emerging
+web service protocol stack. The stack is still evolving, but currently has four main
+layers.
+Service Transport
+This layer is responsible for transporting messages between applications. Currently,
+this layer includes Hyper Text Transport Protocol (HTTP), Simple Mail Transfer
+Protocol (SMTP), File Transfer Protocol (FTP), and newer protocols such as Blocks
+Extensible Exchange Protocol (BEEP).
+XML Messaging
+This layer is responsible for encoding messages in a common XML format so that
+messages can be understood at either end. Currently, this layer includes XML-RPC
+and SOAP.
+Service Description
+This layer is responsible for describing the public interface to a specific web service.
+Currently, service description is handled via the Web Service Description Language
+(WSDL).
+Service Discovery
+This layer is responsible for centralizing services into a common registry and
+providing easy publish/find functionality. Currently, service discovery is handled via
+Universal Description, Discovery, and Integration (UDDI).
+⚫ Service transport is responsible for actually transporting XML messages
+between two computers.
+Hyper Text Transfer Protocol (HTTP)
+Currently, HTTP is the most popular option for service transport. HTTP is simple,
+stable, and widely deployed. Furthermore, most firewalls allow HTTP traffic. This
+allows XMLRPC or SOAP messages to masquerade as HTTP messages. This is good
+if you want to integrate remote applications, but it does raise a number of security
+concerns is a number of security concerns.
+Blocks Extensible Exchange Protocol (BEEP)
+This is a promising alternative to HTTP. BEEP is a new Internet Engineering Task
+Force (IETF) framework for building new protocols. BEEP is layered directly on TCP
+and includes a number of built-in features, including an initial handshakeprotocol, 
+authentication, security, and error handling. Using BEEP, one can create new protocols 
+for a variety of applications, including instant messaging, file transfer, content
+syndication, and network management.
+SOAP is not tied to any specific transport protocol. In fact, you can use SOAP via
+HTTP, SMTP, or FTP. One promising idea is therefore to use SOAP over BEE

@@ -1,0 +1,59 @@
+Software design provides a design plan that describes the elements of a system, how they fit, and
+work together to fulfill the requirement of the system. The objectives of having a design plan are
+as follows −
+To negotiate system requirements, and to set expectations with customers, marketing, and
+management personnel.
+Act as a blueprint during the development process.
+Guide the implementation tasks, including detailed design, coding, integration, and testing.
+
+It comes before the detailed design, coding, integration, and testing and after the domainanalysis,
+requirements analysis, and risk analysis.
+
+Software design is responsible for the code level design such as, what each module is doing, the
+classes scope, and the functions purposes, etc. When used strategically, they can make a
+programmer significantly more efficient by allowing them to avoid reinventing the wheel, instead
+using methods refined by others already. They also provide a useful common languageto
+conceptualize repeated problems and solutions when discussing with others or managingcode
+in larger teams
+
+Major artifacts of the software design process include:
+• Software requirements specification. This document describes the expected behavior of
+the system in the form of functional and non-functional requirements. These requirements
+should be clear, actionable, measurable, and traceable to business requirements.
+Requirements should also define how the software should interact with humans, hardware,
+and other systems.
+• High-level design. The high-level design breaks the system’s architectural design into a
+less-abstracted view of sub-systems and modules and depicts their interaction with each
+other. This high-level design perspective focuses on how the system, along with all its
+components, implements in the form of modules. It recognizes the modular structure of
+each sub-system and their interaction among one another.
+• Detailed design. Detailed design involves the implementation of what is visible as a
+system and its sub-systems in a high-level design. This activity is more detailed towards
+modules and their implementations. It defines a logical structure of each module and their
+interfaces to communicate with other modules.
+The purpose of an architecture schema or design record is to serve as a vehicle for
+software understanding by functioning as a collection point for knowledge about the
+components that make up a DSSA. In particular, the design record organizes
+• domain- specific knowledge about components or design alter natives and
+• Implementation in knowledge about alternate implementations,
+The primary goal of a design record is to adequately describe the components in a reference
+architecture such that the application engineer can make design decisions and component
+selections without looking at inn implementations. The secondary goal of a design record is
+to provide information that the tools in the supporting environment can use.
+The design record data elements used by Loral Federal Systems
+phases in the software life cycle, include:
+1. Name/type
+2. Description
+3. reference requirements satisfied,
+4. design structure (data flow and control flow diagrams),
+5. design rationale,
+6. interface and architecture specifications and dependencies,
+7. P D L (program Design Language) text,
+8. implementation,
+configuration and version data, an
+10. test cases.
+11. metric data,
+12. access rights,
+13. search points,
+14. catalog information,
+15. library and DSSA links, and hypertext paths

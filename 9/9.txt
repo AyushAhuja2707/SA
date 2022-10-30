@@ -1,0 +1,78 @@
+Learning Objective: Student should be able to understand Mapping
+of non-functionalcomponents with system requirements.
+Theory:
+What is Non-Functional Requirement?
+NON-FUNCTIONAL REQUIREMENT (NFR) specifies the 
+quality attribute of a softwaresystem. They judge the software 
+system based on Responsiveness, Usability, Security, Portability 
+and other non-functional standards that are critical to the success 
+of the software system.
+NFRs define the system properties and specify the behavioral pattern 
+under various operating conditions. The various estimation methods
+help in sizing the application based on the functionalrequirements. 
+However, most of these methods have overlooked the influence of 
+non-functional requirements.
+The key NFRs that can be attributed to an application and their mapping as follows.
+1) Reliability Operation Ease
+2) Response Time No mapping given
+3) Performance Performance, Online Update, Online Date Entry
+4) Security No mapping given
+5) Availability No mapping given
+6) Scalability Transaction rate
+7) Capacity No mapping given
+Middleware is a more effective program that acts as bridge in between various 
+applications and other databases otherwise tools. It is placed in between operating 
+system and other applications which run on it. Middleware allows making better 
+communication, application services, messaging, authentication, API management
+and management of data between different kinds ofapplications which help to 
+exchange data. The connectors sit between the two APIs or you can say and the ends
+of the connectors are APIs.The connectors receive data from one app/solution and 
+process it to make it understandable and accessible in the other app/solution, 
+regardless of whether any direct form of integration was available in the two apps.
+
+Mapping of NFRs:
+Operation Ease to Reliability:
+An application or the software system once installed and configured on a given 
+platform should require no manual intervention, except for starting and shutting down. 
+The system should be ableto maintain a specified level of performance in case of 
+software faults. It should also be able to re-establish its level of performance and to 
+recover all the data directly affected in case of a failure in the minimum time and 
+effort. This is mapped on to the reliability NFR. It may be defined as “a system which 
+is capable of reestablishing its level of performance and recovering the data directly 
+affected in case of a failure and on the time and effort needed for it. The design criteria 
+for reliability can be defined as self-contained the system should have all the features
+necessary for all its operations including recovering it by itself; completeness- it 
+should be complete in itself and not dependent on anything else; robustness/integrityit should not easily breakdown; error tolerance- it should be able to tolerate errors
+and rectify them and continue in its operation. There are “numerous metrics for 
+determining reliability: mean time to failure, defect reports and counts, resource 
+consumption, stability, uptime percentage and even customer perception.”
+
+Performance:
+Real time systems have strict performance parameters like performing at the same 
+level even during peak user times, producing high throughput, serving a huge user 
+base, etc. The DI varies from no special performance requirements to response time 
+being critical during all business hours and till performance analysis tools being used 
+in the design. System should meet the desired performance expectation. Also, if online 
+update has to take place, then the performance expectations to be met are very high –
+fast response, low processing time and high throughput rates. The performance NFR
+is also based on the Online Data Entry requirements of an application. The presentday trend is to have interactive and real-time data entry. The GUI development 
+requires a lot of effort as help has to be provided, validation to be implemented,
+reference information for faster data entry operations, etc. Performance when related 
+to this can be defined as “attributes of software that bear on response and processing
+times and on throughput rates in performing its function.
+
+Transaction Rate to Scalability:
+In many business applications the transaction rate increases to high peak levels once 
+in a day or once in a week with the requirement remaining so that there has to be no 
+dramatic increase in transaction time. This issue has to be looked into in the design, 
+development and/or installation phases of a project. This GSC is mapped on to the 
+scalability NFR. The term scalability implies “the ability to scale up to peak 
+transaction loads. In order to achieve this the application has to bedesigned in such a 
+way so that it should cater to the highest possible figures thus wasting resources when
+the transaction rate is low. The architecture should be designed in a multi-layered 
+manner in complex algorithm-based applications to scale up to peak transaction rates. 
+In today’s systems, this GSC does not contribute much to the DI as present-day 
+hardware and operating systems provide built-in features such as high bandwidth 
+network, high speed storage disks with high-speed disk access timings and CPUs with 
+high MHZ processing speed which when combined leads to build in high transaction
+rates.

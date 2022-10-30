@@ -1,0 +1,67 @@
+Consistency, Completeness, Unambigousness, Corectness, Modifiability, Verifiability, Tracability , Ranking for importance & stability
+
+
+The purpose of a requirements architecture is to structure and organize requirements in such a
+way that the requirements are stable, usable, adapt to changes, and are elegant. When a
+requirements architecture is sound, it helps facilitate better design of the system it attempts to
+describe. When a requirements architecture is faulty, it can cause problems. When the
+requirements architecture is poor, the following problems result:
+i. No one knows why a requirement was changed
+ii. Requirements cannot be reused
+iii. Traceability is superficial or unused by other teams
+iv. Requirements reviews involve irrelevant information
+v. Big picture of the system being built and reasons for building it are not wellunderstood
+vi. It is important to keep in mind that the purpose of a good requirements architecture
+is tobuild working software that meets business objectives.
+Software requirements must be testable, unambiguous, and concise, a requirements architecture
+must also possess certain attributes. The above blueprint provides some general guidelines for
+how to structure requirements, but keeping in mind the following attributes:
+a. Maintainable: Whatever choices you make in organizing 
+requirements, ensure that youcreate a structure that can adapt to 
+changes in requirements.
+b. Traceable: Do you know which requirements any given process flow step is traced
+to?
+c. Usable: Consider the stakeholders in the org chart—are the requirements 
+architected in sucha way that you could either produce output for each of 
+them or such that they could navigateto the requirements in the tool and
+find the requirements objects that are relevant to them? The hierarchies 
+and traces you create should be consistent: Don’t create one hierarchy
+where the FRs are children of the models and another hierarchy for the
+same project where FRs are not children of the models but are traced to 
+BLOOD BANK MANAGEMENT SYSTEM SRS 1
+them. The absolute worst thing to do is to list all requirements objects in
+a flat list or to manage your requirements in word or excel.
+d. Scalable: Imagine your requirements architecture with 10 times the number of
+requirementsit has. Now imagine it with 100 times the number of requirements. 
+Architectures should be able to support the addition of new requirements with 
+minimal overhead.
+e. Elegant: Are there just enough hierarchies to facilitate use? Are you repeating
+hierarchiesjust to make traceability easier? Does your architecture contain duplicate 
+models or requirements?
+f. Generalizable: The architecture approach should be repeatable. You ought to be 
+able to gointo any project and no matter the domain uses the same approach to 
+requirements architecture.
+All architectures are tradeoffs – like in software architecture, you may need to sometimes
+sacrifice aesthetics for robust traceability or reuse. Or you may sacrifice usability for ease of
+exporting to external formats. Understand the tradeoffs you are making with your requirements
+architecture.
+Domain-specific Software Development Various mechanisms of domain-specific software
+development are under investigation within the projects. Compositional mechanisms facilitate
+reuse of existing artifacts, including software. Generative mechanisms are used when needed
+components are not available.1 Constraint-based reasoning systems and module 
+interconnectionlanguages are critical underlying technologies for software composition. 
+Prototyping technologies underlie generation. The TRW project serves as a technology 
+conduit from the prototyping community into the DSSA program.
+Following are the system requirement of Domain-specific Software Development:
+ Performance
+ Scalability
+ Availability
+ Reliability
+ Security
+ Maintainability
+ Flexibility
+ Configurability
+ Personalizabilty
+ Usability
+ Portability
+ Conformance to standard

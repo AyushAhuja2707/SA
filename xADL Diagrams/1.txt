@@ -1,0 +1,110 @@
+ADL
+A type of model for representing the form (the component structure) of a software system, which can be used to model a software architecture in terms of components and connectors and even generate a system or parts of a system. 
+
+This representation model is known as an architectural description language.
+
+An architectural description language (ADL) has a formal, usually textual, syntax and can be used to describe actual system architectures in a machine-readable way. 
+
+xADL
+
+
+xADL is a highly-extensible software architecture description language (ADL). It is used to
+describe various aspects of the architecture of a software system. The architecture of a software
+system is its high-level design; design at the level of components, connectors, and their
+configurations. Like other ADLs such as Rapide, Darwin, and Wright, xADL's core models the
+four most common architectural constructs, namely:
+ Components : (the loci of computation),
+ Connectors : (the loci of communication),
+ Interfaces : (the exposed entry and exit points for components and connectors), and
+ Configurations : (topological arrangements of components and connectors as realized
+by links).
+
+ xADL is an XML-based language. XML, the eXtensible Markup Language, was originally 
+created to annotate, or "mark up" text documents with semantic information. Elements of 
+text are marked up using tags, or special strings, that delimit a section of text. Tags begin 
+with an open angle-bracket (<) and end with a closing angle-bracket (>). In XML 
+documents, tags generally come in pairs, signifying the start and end of a text element. 
+Start tags contain a tag name immediately after the opening angle-bracket, and end-tags 
+contain the same name, prefaced by a forward slash (/) immediately after the opening 
+angle-bracket. Elements may be nested as necessary, but may not overlap. An example of 
+some marked up text in XML might be:
+<name><first>Herb</first> <last>Mahler</last></name>
+
+xADL's XML basis means that data in xADL is arranged hierarchically. Connections
+between data elements that are not hierarchically arranged are managed using simple XML
+links; xADL's tool support facilitates navigating these links.
+ As an XML-based language, xADL documents are readable and writable by hand, as
+simple text documents. However, because xADL is defined in multiple schemas, each
+schema having its own XML namespace, the actual code can get quite complicated. For
+example, this is a real component description in xADL:
+
+The xADL Type System
+
+xADL adopts the more traditional types-and-instances model found in many programming
+languages. In this model, components, connectors, and interfaces all have types
+(called component types, connector types, and interface types, respectively).
+Links do not have types because links do not have any architectural semantics. The relationships
+between types, structure, and instances are shown in the following table
+Instance(Run TIme)   Structure(Design Time)   Type(Design time)
+Compnent Instance	Component		Component type
+Connector Insta		Connector		Connector type
+Interface Instance	Interfacr		Interface type
+Link Instance		Link			-
+Group			Froup			-
+
+Modeling of xADL
+The instances schema gives xADL the ability to model running instances of architectural
+constructs like components, connectors, interfaces, and links. However, much work on software
+architecture is centered around the design of the architecture, rather than capturing properties of
+a running one.
+For the purposes of this discussion, we make a distinction between architecture instances, which
+exist at run-time, and structural elements, which exist at design-time.
+The xADL constructs available for modeling architectural structure mirror almost exactly those
+available for modeling architecture instances. The constructs defined in the instance schema are:
+ Components
+ Connectors
+ Interfaces
+ Links
+ General Groups
+
+1. Components:
+• “A Software component is an architectural entity that -
+1)encapsulates a subset of the system’s functionality 
+2)restricts access to that subset via an explicitly defined interface
+3)has explicitly defined dependencies on itself”
+• A Component can be as simple as a single operation or as complex as an 
+entire system.
+• It can be “seen” by its end users completely (if the developer has made it 
+public or it can be seen as a black box.
+• It can be usable and reuseable, which is an important aspect.
+
+Elements of SA
+1. Components: (Contd..)
+• One component can depend for its functionality on another component, 
+and both can be linked by an interface.
+• The extent of the context captured by a component can include:
+- The interfaces it uses to link with other components
+- The availability of resources like the data files, directories
+- The required system software such as programming language run 
+time environments, etc.
+- The hardware configurations.
+
+Elements of SA
+2. Connector:
+• “ A software connector is an architectural element tasked with effecting 
+and regulating interaction among components”.
+• In box and line diagrams, the boxes represent the Components and lines 
+represent the connectors.
+• Most widely used connector is the Procedure call. They are directly 
+implemented in programming languages where they directly enable the 
+synchronous exchange of data between components.
+
+Elements of SA
+3. Configuration:
+• “An architectural configuration is a set of specific associations between the 
+components and connectors of a software’s system architecture.”
+• A configuration may also be called as a graph where in nodes are the 
+components and edges are the the connectors, the entire graph will be 
+called as the configuration.
+
+

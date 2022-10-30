@@ -1,0 +1,114 @@
+last mein apne words mein RMI
+Software system integration is essential where communication between 
+different applications runningon different platform is needed. Suppose a 
+system designed for payroll running with Human Resource System. In that 
+case employees’ data need to be inserted in both systems. The system 
+integration benefits a lot in these cases where data and services needed to
+be shared.
+
+
+Web services are becoming very popular to share data between systems 
+over the network and over theinternet as well. In software industry the 
+software integration carried same steps as software development and hence 
+demands same kind of development procedures and testing.
+This ensures the meaningful and clear communication between the systems. 
+Systems integration becomes inevitable in Enterprise Systems where the 
+whole organization needed to share data and services and give the feel to 
+user as one system. The core purpose of integration is to make the systems
+communicate and also to make the whole system flexible and expandable
+
+A . Middleware
+Independently written software systems need to be integrated in large 
+system for example industry, institution, etc. These systems need to agree 
+on common method for integration. To get them communicate there is need 
+to have something in between them. The middle thing is termed commonly
+as middleware.
+
+Miidleware is potrntial ueful tool when building s/w connectores
+It is computer s/w that provides services to s/w applications beyond those available from OS
+
+It makes easier for s/w developers to implement communication & i/p / o/p so they can focus on the specific purpose of the applocation
+
+
+B .Service Oriented Architecture
+Service Oriented Architecture (SOA) is the architectural design and pattern 
+which is used to provide services to different applications. Its goal is to 
+achieve loose coupling between interacting componentsof applications.
+Web Services, Corba, Jini, etc are the technologies used to implement
+SOA.
+Main benefit of SOA is that it can provide the means of communication 
+between completely different applications (built in different technologies). 
+The services are also completely independent and reusableand the nature of 
+reusability provide the less time to market. All the services technologies 
+needs to be implemented using the SOA design pattern and need to be 
+designed on the basis of SOA to get maximum benefit.
+C .Web Services
+Web service is the SOA technology with additional requirements of using 
+internet protocols (HTTP, FTP,SMTP, etc.) and using XML (Extensible 
+Markup Language) for message transmission. [7] These are application 
+components which communicate between different applications using open 
+protocol. Openprotocol is the web protocol for querying and updating 
+information. These components can be used by different kinds of 
+applications to exchange information. HTML (HyperText Markup 
+Language) and XML are the basics of web service implementation.
+D.WSDL (Web Service Descriptive Language)
+WSDL is a language to describe web services and providing the link to 
+access these web services. It is acting as a publisher in web service 
+architecture. It is the XML document which is recommended by W3C(World 
+Wide Web Consortium) in 2007. In WSDL XML describes the service and 
+the address from where applications can access the service. [8] WSDL 
+predecessors were COM and CORBA
+E. UDDI (Universal Description, Discovery and Integration)
+It is directory service / registry service where applications can register and 
+look for web services. It is Platform independent framework. It is acting like 
+service register in web service architecture. It uses HTML, XML and DNS 
+(Domain Name Server) protocols which enables it to become the directory 
+service.It defines the keyword search, categories and classification for an 
+application and registers it into business directory. In that way it is making 
+the application easier to be approached by the customers online
+F. SOAP (Simple Object Access Protocol)
+It is a messaging / invoker in web service architecture. It is use to send 
+messages in between the serviceand service consumer; and in between 
+service consumer and service registry. It used to communicate with web
+service. It is a message framework which transfers the information between
+sender and
+receiver. SOAP doesn’t define the service but defines the mechanisms for messaging. It
+binds the client
+to the service
+G.SOA - A solution to spaghetti architecture
+In a fairly medium scale to large software architecture where there is need to 
+integrate or communicatebetween different kinds of applications the 
+introduction of links can make the architecture messy and it is called 
+spaghetti architecture [9]. Figure 4 shows that problem in detail. It makes the 
+system less flexible and expandability is the nightmare. Service Oriented 
+Architecture (SOA) makes the architecture flexible and expandable.
+
+
+RMI Remote method Invocation by Ayush
+It is an API that allows an object to invokde anotther method that exists in seperate address space 
+
+Client --> RMI --> MAchine B
+
+Machine A can invoke methods of Machine B
+
+RMI working
+2 intermediate objects are used for communication b/t cient & server
+stub obj and skeleton obj
+Diag:
+
+remote mthd       (parameter)  -->  STUB object  ----> internet ---> Skeleton Object (parameter)--> Remote method call on server
+call on client 		<------ (return value)							<--(return value)
+
+
+Goals of RMI
+Minimizes complexity of Application
+Distributed Garbage Collection
+
+
+Client --> (invokes method using fetched objs)  --> Server
+   \							|
+   |							|
+   | ------ RMI registry ------------------------------	 
+    lookup()		   bind() / rebind() 
+fetches the object  		Binds the obj in RMI registry
+

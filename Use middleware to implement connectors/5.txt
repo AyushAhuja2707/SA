@@ -1,0 +1,102 @@
+Middle ware is computer s/w that provides services to s/w applications beyond those available from OS
+
+Middleware makes it easier for S/W developers to implement comm & i/p / o/p so they can focus on the specific purpose of their applications
+
+Some s/w components that an frequency connected with middlware include enterprise edition & web services .
+
+Middleware is a more effective program that acts as bridge in between various applications and
+other databases otherwise tools. It is placed in between operating system and other applications
+which run on it. Middleware allows making better communication, application services,
+messaging, authentication, API management and management of data between different kinds of
+applications which help to exchange data.
+The connectors sit between the two APIs or you can say and the ends of the connectors are APIs.
+The connectors receive data from one app/solution and process it to make it understandable and
+accessible in the other app/solution, regardless of whether any direct form of integration was
+available in the two apps.
+Role of Middleware is :-
+Middleware is a potentially useful tool when building software connectors. First, it can be used
+to bridge thread, process and network boundaries. Second, it can provide pre-built protocols for
+exchanging data among software components or connectors. Finally, some middleware packages
+include features of software connectors such as filtering, routing, and broadcast of messages or
+other data.
+A signal interaction is a one-way interaction between an initiating object, called a client,
+and a responding object, called a server. An operation interaction is an interaction
+between a client object and server object that is either an interrogation or an
+announcement. An interrogation is composed of two one-way interactions: a request and
+a response. An announcement is a one-way request from a client object to a server
+object in which the client object expects no response, and the server object does not
+respond. A flow interaction is an ordered set of one or more one-way communications
+from a producer object to a consumer object. These interactions are a generalized
+metamodel for describing communication styles between objects that hat can be implemented
+using a variety of middleware such as Remote Procedure Call (RPC) and Remote Method Invocation (RMI) and
+message queues (as selected and specified in the technology view).
+can be implemented using a variety of middleware such as Remote Procedure Call
+(RPC) and Remote Method Invocation (RMI) and message queues.
+Connectors as a primary vehicle for interprocess communication. A single conceptual
+connector can be “broken up” vertically (a) or horizontally (b) for this purpose.
+Vertical Connectors :
+
+	device 1 		device 3
+	   |			   |
+	conn1 			conn2
+	  |			  |
+	device 2		device 4
+
+Horizontal Connectors :
+
+
+Linking Ports Across Process Boundaries :
+The ports can call methods on each other, sending messages as method parameters. Our intent was
+to simply use the middleware to exchange port references across process boundaries and usethe
+existing technique for message passing.
+The middleware technology would be entirely encapsulated within the port entity and would not
+be visible to architects or developers. The singleprocess implementation of a C2 connector links
+two ports together by having each port contain a reference to the other one.
+Linking Connectors Across Process Boundaries :
+Sharing communication ports across process boundaries gave us fine-grained control over
+implementing an architecture as a multi-process application. However, it required additional
+functionality in the C2 implementation framework and did not isolate the change to the appropriate
+abstraction: the connector. In order to remedy this, we devised two connectorbased approaches.
+Both of these approaches consist of implementing a single conceptual software connector using
+two or more actual connectors that are linked across process or network boundaries. Each actual
+connector thus becomes a segment of a single “ virtual connector.” All access to the underlying
+middleware technology is encapsulated entirely within the abstraction ofa connector, meaning that
+it is unseen by both architects and developers. We call the first approach “ lateral welding,”
+depicted in Fig. 2a. Messages sent to any segment of the multi- process connector are broadcast to
+all other segments. Upon receiving a message, each segment has the responsibility of filtering and
+forwarding it to components in its process as appropriate. Only messages are sent across process
+boundaries. While the lateral welding approach allowedus to “ vertically slice” a C2 application,
+we also developed an approach to “ horizontally slice” an application, as shown in Fig. 2b. This
+approach is similar to the idea of lateral welding: a conceptual connector is broken up into top
+and bottom segments, each of which exhibits thesame properties as a single-process connector
+to the components attached above and below it, respectively. However, the segments themselves
+are joined using the appropriate middleware. When used with a middleware technology that
+supports dynamic change at run-time, all of these approaches, both using ports and connectors, can
+be used to build applications where processes can join and leave a running application.
+Using Middleware Technologies :
+To explore the use of OTS middleware with software connectors, we chose four representative
+technologies from the field of available middleware packages. These were Q, an RPC system,
+Polylith, a message bus, RMI, a connection mechanism for Java objects, and ILU, a distributed
+objects package.A description of one of our efforts involving integrating two middleware
+technologies simultaneously in the same application is given here. With each middleware package,
+we were able to encapsulate all the middleware functionality within the connectors
+themselves. This means that architects and developers can use the middleware-enhanced
+connectors thus created just as they would use normal, in-process C2 connectors.
+Simultaneous Use of Multiple Middleware Packages :
+Each middleware technology we evaluated has unique benefits. By combining multiple such
+technologies in a single application, the application can potentially obtain the benefits of all of
+them. For instance, a middleware technology that supports multiple platforms but only a single
+language, such as RMI, could be combined with one that supports multiple languages but a single
+platform, such as Q, to create an application that supports both multiple languages and multiple
+platforms. The advantages of combining multiple middleware technologies within software
+connectors are manifold. In the absence of a single panacea solution that supports all required
+platforms, languages, and network protocols, the ability to leverage the capabilities of several
+different middleware technologies significantly widens the range of applications that can be
+implemented within an architectural style such as C2. We combined our implementations of ILUC2 and RMI-C2 connectors in a version of the KLAX application, a real time video game
+application built as an experimental platform for work on the C2 architecture. We were able to
+do so with no modification to the middleware-enhanced C2 framework or the connectors
+themselves by combining the lateral welding technique shown in Fig. 2a with the horizontal slicing
+technique shown in Fig. 2b. This approach works for any combination of OTS connectorsthat use
+the lateral welding technique. An alternative approach would have been to create a single
+connector that supported both ILU and RMI, but this would have required changes to the
+framework.
